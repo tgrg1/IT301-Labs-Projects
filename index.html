@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Cool Website</title>
-    <style>
+    <title>Tommy's IT301 Labs and Projects</title>
+    <!-- <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #121220;
+            color:ghostwhite
+        }
         .classy {
             color: red;
             display: inline-block;
@@ -14,16 +19,66 @@
             -o-transform: matrix(-1, 0, 0, -1, 0, 0);
             transform: matrix(-1, 0, 0, -1, 0, 0);
         }
-    </style>
+        section {
+            margin-bottom: 10em;
+        }
+        marquee {
+            background-color: #450084;
+            color: #CBB677;
+            font-size: 24pt;
+            font-family: 'Comic Sans MS', sans-serif
+        }
+        a {
+            color: lightblue
+        }
+    </style> -->
 </head>
 <body>
-    <h1>header for website</h1>
-    <p>hi</p>
-    <p>woaw!</p>
-    <marquee style="font-size: 32pt">hi</marquee>
-    <p><strong>hello bold</strong> aaa <strong>hi</p></strong>
-    <p>Lorem ipsum <b>dolor</b>, sit amet consectetur adipisicing elit. Doloremque iure et, laborum eaque quo possimus cumque deserunt fuga molestiae architecto dolore, saepe odio magni. Cum sit corporis suscipit possimus incidunt.</p>
-    <p class="classy">This text is upside down and red!</p><br>
-    <img src="https://i.redd.it/ew7wjtrzkzbe1.jpeg" alt="embarrassing cat" style="width: 50%; height: 50%"/>
+    <header>
+        <h1 id="top">Tommy's IT301 Labs and Projects</h1>
+        <marquee>welcome to this really cool website</marquee>
+    </header>
+    <nav>
+        <p><a href="https://www.jmu.edu">Go to JMU website</a></p>
+        <p><a href="#labs">find labs</a></p>
+        <p><a href="#more-stuff">find more stuff</a></p>
+    </nav>
+    <main>
+        <section>
+            <h2>About</h2>
+            <article>
+                <p>Hi there! My name is Tommy. I go to James Madison University where I am a 3<sup><u>rd</u></sup>  year major in Information Technology. I am also in the <a href="https://www.jmu.edu/mrd">Marching Royal Dukes</a>, where I play trumpet. I very much so enjoy being here at JMU and especially the IT program.</div></p>
+                <p>My interests include video games, music, and traveling (though I haven't done it in a while). A few years back, I went on a cross-country road trip from Virginia all the way to California with many stops in between. That was a very fun experience and I wish to do much more like it in the future.</p>
+            </article>
+        </section>
+        <section>
+            <h2 id="labs">Labs</h2>
+            <ul>
+                <li>Lab 1 - My first page</li>
+                <li>Lab 2 - Semantics</li>
+            </ul>
+        </section>
+        <section>
+            <h2 id="more-stuff">more stuff</h2>
+            <p>wow you found the bottom of the page</p>
+            <aside>
+                <p class="classy">This text is upside down and red!</p>
+                <h3>HTML color names</h3>
+                <ol>
+                    <li style="color: fuchsia;">Fuchsia</li>
+                        <ul>
+                            <li>this is a sub-element!</li>
+                        </ul>
+                    <li style="color: olive;">Olive</li>
+                    <li style="color: peru;">Peru</li>
+                    <li style="color: tomato">Tomato</li>
+                    <li style="color:blanchedalmond">Blanched Almond</li>
+                </ol>
+            </aside>
+            <p>This is a very classic cat who I relate to</p>
+            <div><img src="https://upload.wikimedia.org/wikipedia/en/8/87/Keyboard_cat.jpg" alt="keyboard cat" style="width: 50%; height: 50%"/></div>
+        </section>
+    </main>
+    <a href="#top">back to top</a>
 </body>
 </html>
