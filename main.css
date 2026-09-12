@@ -1,3 +1,4 @@
+/***General Formatting***/
 body, html {
     padding: 0;
     margin: 0;
@@ -16,38 +17,6 @@ header {
 nav {
     text-align: center;
 }
-.nav-button {
-    background-color: #363a4f;
-    transition: background-color 250ms;
-    border-radius: 8px;
-    padding: 6px;
-    margin: 5px 5px;
-    box-shadow: 2px 2px 4px 3px #1e2030;
-    display: inline-block;
-    white-space: nowrap;
-    width: auto;
-}
-.nav-button:hover {
-    background-color: #494d64;
-}
-#go-top {
-    color:#cad3f5;
-    text-decoration: none;
-    border-radius: 50%;
-    padding: 8px;
-    display: block;
-    position: fixed;
-    bottom: 12px;
-    right: 12px;
-    z-index: 99;
-}
-.image-box {
-    font-size: 0.8em;
-    text-align: center;
-    p {
-        margin-top: 4px;
-    }
-}
 main {
     width: 75%;
     margin: 0 auto
@@ -55,6 +24,8 @@ main {
 section {
     margin-bottom: 4em;
 }
+
+/***Text Formatting***/
 marquee {
     padding: 5px;
     border: 6px double #cbb677;
@@ -74,4 +45,39 @@ h1, h2 {
   font-family: 'Acme', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/***Buttons/Misc***/
+.nav-button {
+    background-color: #363a4f;
+    transition: background-color 250ms;
+    border-radius: 8px;
+    padding: 6px;
+    margin: 5px 5px;
+    box-shadow: 2px 2px 4px 3px #1e2030;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+}
+.nav-button:hover {
+    background-color: #494d64;
+}
+#go-top {
+    /* css from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+    color:#cad3f5;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 8px;
+    display: block;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    z-index: 99;
+}
+.image-box {
+    font-size: 0.8em;
+    text-align: center;
+    p {
+        margin-top: 4px;
+    }
 }
