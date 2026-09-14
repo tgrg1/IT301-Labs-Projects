@@ -32,7 +32,8 @@ marquee {
     background-color: #450084;
     color: #cbb677;
     font-size: 1.75em;
-    font-family: 'Rubik Glitch', sans-serif;
+    font-family: 'Comic Relief', 'Comic Sans MS', sans-serif;
+    width: 50%;
 }
 a {
     color: #91d7e3;
