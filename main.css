@@ -19,7 +19,8 @@ nav {
 }
 main {
     width: 75%;
-    margin: 0 auto
+    margin: 0 auto;
+    line-height: 1.5;
 }
 section {
     margin-bottom: 4em;
@@ -46,6 +47,12 @@ h1, h2 {
   font-family: 'Acme', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+sup {
+    /* superscript without line height change */
+    vertical-align: top;
+    font-size: 0.7em;
+    u {text-decoration-style: double;}
 }
 
 /***Buttons/Misc***/
