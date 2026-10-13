@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab 10 - Tip Calculator</title>
+    </head>
+    <body>
+        <script>
+            let prompt_message = "Enter the total restaurant bill amount:";
+            do {
+                total_bill = Number(prompt(prompt_message));
+                if (total_bill == 0) {
+                    prompt_message = "Error: The entered value must not be blank and greater than 0.\n\nEnter the total restaurant bill amount:"
+                }
+                else if (total_bill < 0) {
+                    prompt_message = "Error: The entered value must not be a negative number.\n\nEnter the total restaurant bill amount:"
+                }
+                else if (isNaN(total_bill)) {
+                    prompt_message = "Error: The entered value was not a number. Please enter a valid number.\n\nEnter the total restaurant bill amount:"
+                }
+            } while (total_bill <= 0 || isNaN(total_bill));
+            let tip_amount = total_bill * 0.1;
+            // formatting from https://stackoverflow.com/a/32178833
+            const tip_message = `For a bill of \$${total_bill.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 })}, the tip should be \$${tip_amount.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 })}.`
+            console.log(tip_message)
+            document.write(tip_message)
+        </script>
+    </body>
+</html>
