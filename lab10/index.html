@@ -21,7 +21,7 @@
                 }
             } while (total_bill <= 0 || isNaN(total_bill));
             let tip_amount = total_bill * 0.1;
-            // formatting from https://stackoverflow.com/a/32178833
+            // formatting from https://stackoverflow.com/a/53378133
             const tip_message = `For a bill of \$${total_bill.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 })}, the tip should be \$${tip_amount.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 })}.`
             console.log(tip_message)
             document.write(tip_message)

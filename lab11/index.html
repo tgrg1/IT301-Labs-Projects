@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11 - Mouse Events</title>
+    <style>
+        #box {
+            background-color: blue;
+            color: white;
+            font-size: 1.2em;
+            width: 200px;
+            padding: 3px;
+            text-align: center;
+        }
+        #box:hover {
+            cursor: pointer;
+        }
+        #boxmove {
+            height: 75vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Click Me! 😊</div>
+    <div id="boxmove"></div>
+    <script>
+        const box = document.getElementById('box');
+        const boxmove = document.getElementById('boxmove');
+
+        function mouseoverFunction(event){
+            event.target.textContent = 'Do not click! 😠'
+            event.target.style.backgroundColor = 'yellow';
+            event.target.style.color = 'black';
+            // console.log(event);
+        }
+        function clickFunction(event){
+            event.target.textContent = 'Ouch! 🤕'
+            event.target.style.backgroundColor = 'red';
+            event.target.style.color = 'white';
+            // console.log(event);
+        }
+        function mouseoutFunction(event){
+            event.target.textContent = 'Phew! 😌'
+            event.target.style.backgroundColor = 'lightgreen';
+            event.target.style.color = 'black';
+            // console.log(event);
+        }
+        function dblclickFunction(event){
+            event.target.textContent = 'Double trouble! 🤩'
+            event.target.style.backgroundColor = 'pink';
+            event.target.style.color = 'black';
+            // console.log(event);
+        }
+        function mousemoveFunction(event){
+            box.textContent = 'I see you! 👀'
+            box.style.backgroundColor = 'lightblue';
+            box.style.color = 'black';
+            // console.log(event);
+        }
+
+        box.addEventListener('mouseover', mouseoverFunction);
+        box.addEventListener('click', clickFunction);
+        box.addEventListener('mouseout', mouseoutFunction);
+        box.addEventListener('dblclick', dblclickFunction);
+        boxmove.addEventListener('mousemove', mousemoveFunction);
+
+    </script>
+</body>
+</html>
