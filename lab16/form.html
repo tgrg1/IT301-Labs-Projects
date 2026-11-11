@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16 - Form Validation</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .valid {
+            color: green;
+        }
+        .invalid {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="login">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name..." required><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="your.email@example.com" required><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password..." required><br>
+        <ul id="password-rules" class="hidden">
+            <li id="length-rule">Must be at least 6 characters</li>
+            <li id="special-rule">Must include a special character (!@#$...)</li>
+            <li id="upper-rule">Must include an uppercase letter (A-Z)</li>
+        </ul>
+
+        <button id="submit">Submit</button>
+    </form>
+
+    <script>
+        const password = document.getElementById('password');
+        const passwordrules = document.getElementById('password-rules');
+        const lengthrule = document.getElementById('length-rule');
+        const specialrule = document.getElementById('special-rule');
+        const upperrule = document.getElementById('upper-rule');
+        let validPassword = false;
+
+        password.addEventListener('input', ()=>{
+            const validLength = password.value.length >= 6;
+            const validSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password.value);
+            const validUpper = /[A-Z]/.test(password.value);
+
+            passwordrules.classList.remove("hidden");
+
+            lengthrule.classList.toggle("valid", validLength);
+            lengthrule.classList.toggle("invalid", !validLength);
+            specialrule.classList.toggle("valid", validSpecial);
+            specialrule.classList.toggle("invalid", !validSpecial);
+            upperrule.classList.toggle("valid", validUpper);
+            upperrule.classList.toggle("invalid", !validUpper);
+
+            validPassword = validLength && validSpecial && validUpper;
+        });
+
+        document.getElementById('login').addEventListener('submit',(event)=>{
+            event.preventDefault();
+            if (validPassword) {
+                window.location.href = "success.html";
+            }
+        });
+    </script>
+</body>
+</html>
